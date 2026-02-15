@@ -1,0 +1,21 @@
+[2024-02-14 10:15:23] INFO - Application started
+[2024-02-14 10:15:24] INFO - Database connection established
+[2024-02-14 10:16:45] INFO - API endpoint /api/health called
+[2024-02-14 10:17:12] WARNING - Response time exceeding threshold: 1250ms
+[2024-02-14 10:18:33] ERROR - Connection timeout to https://api.example.com/data
+[2024-02-14 10:19:01] INFO - Retrying connection...
+[2024-02-14 10:19:05] ERROR - Authentication failed: Invalid API key
+[2024-02-14 10:20:15] INFO - Webhook received from salesforce
+[2024-02-14 10:21:44] ERROR - Database query failed: relation "users" does not exist
+[2024-02-14 10:22:10] WARNING - High memory usage detected: 85%
+[2024-02-14 10:23:55] INFO - Processing batch job #1234
+[2024-02-14 10:25:12] ERROR - 500 Internal Server Error on endpoint /api/customers
+[2024-02-14 10:26:33] INFO - Batch job completed successfully
+[2024-02-14 10:27:41] WARNING - SSL certificate expires in 7 days
+[2024-02-14 10:28:19] ERROR - Connection refused to database server
+[2024-02-14 10:29:02] INFO - Attempting database reconnection
+[2024-02-14 10:29:05] INFO - Database connection restored
+[2024-02-14 10:30:44] INFO - User login: user@example.com
+[2024-02-14 10:31:23] ERROR - File not found: /data/export_2024.csv
+[2024-02-14 10:32:55] WARNING - Disk space running low: 92% used
+[2024-02-14 10:33:12] INFO - Cleanup task initiated

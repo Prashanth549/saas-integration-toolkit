@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.env
+
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Database
+*.db
+*.sqlite
+.pgpass
+
+# Logs
+logs/*.log
+!logs/sample.log
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Secrets
+config.ini
+secrets.py
+.env

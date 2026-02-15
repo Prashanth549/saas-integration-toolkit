@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>🔗 Integration Health Monitor</h1>
+                <div class="header-info">
+                    <span class="api-status" id="apiStatus">
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="statusText">Connecting...</span>
+                    </span>
+                    <span class="last-updated" id="lastUpdated">Updated: Never</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Summary Cards -->
+            <section class="summary-section">
+                <h2>Overview</h2>
+                <div class="card-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">📊</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Total Endpoints</div>
+                            <div class="metric-value" id="totalEndpoints">-</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card success">
+                        <div class="metric-icon">✅</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Healthy</div>
+                            <div class="metric-value" id="healthyEndpoints">-</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card warning">
+                        <div class="metric-icon">⚠️</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Warnings</div>
+                            <div class="metric-value" id="warningEndpoints">-</div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card error">
+                        <div class="metric-icon">❌</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Critical</div>
+                            <div class="metric-value" id="criticalEndpoints">-</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Health Table -->
+            <section class="data-section">
+                <div class="section-header">
+                    <h2>API Health Status</h2>
+                    <button class="btn-refresh" id="btnRefresh">🔄 Refresh</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table" id="healthTable">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Endpoint</th>
+                                <th>Customer</th>
+                                <th>Uptime</th>
+                                <th>Avg Response</th>
+                                <th>Last Check</th>
+                            </tr>
+                        </thead>
+                        <tbody id="healthTableBody">
+                            <tr>
+                                <td colspan="6" class="loading">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Customer Health -->
+            <section class="data-section">
+                <h2>Customer Integration Health</h2>
+                
+                <div class="customer-grid" id="customerGrid">
+                    <div class="customer-card loading-card">
+                        <p>Loading customer data...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Errors -->
+            <section class="data-section">
+                <h2>Recent Errors</h2>
+                
+                <div class="error-list" id="errorList">
+                    <div class="error-item loading">
+                        <p>Loading recent errors...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Alerts -->
+            <section class="data-section">
+                <h2>Active Alerts</h2>
+                
+                <div class="alert-list" id="alertList">
+                    <div class="alert-item loading">
+                        <p>Loading alerts...</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SaaS Integration Toolkit | Built with HTML, CSS, JavaScript, Python, PostgreSQL</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
